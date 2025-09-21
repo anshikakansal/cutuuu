@@ -168,15 +168,15 @@ export default function AuthScreen() {
         !formData.email?.trim() ||
         !formData.phone?.trim()
       ) {
-        Alert.alert('Error', 'Please fill in all required fields (marked with *)');
+        showErrorToast('Validation Error', 'Please fill in all required fields (marked with *)');
         return;
       }
       if (!isValidEmail(formData.email)) {
-        Alert.alert('Error', 'Please enter a valid email address');
+        showErrorToast('Validation Error', 'Please enter a valid email address');
         return;
       }
       if (!isValidPhone(formData.phone)) {
-        Alert.alert('Error', 'Please enter a valid phone number');
+        showErrorToast('Validation Error', 'Please enter a valid phone number');
         return;
       }
 
